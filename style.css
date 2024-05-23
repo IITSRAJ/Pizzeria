@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Colours used  */
+:root {
+    --color_bread: #FFF1D7;
+    --color_gravy: #BB3E00;
+    --color_chesse: #F7AD45;
+    --color_veggie: #5F8D37;
+    --color_dark: #212121;
+    --color_light: #F3F3F3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* Bg-colour*/
+body{
+    background-color: var(--color_bread);
+}
+
+
+
+/*Nav-bar*/
+nav {
+    width: 100%;
+    height: 80px;
+    padding: 0px 70px;
+    background-color: var(--color_bread);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.menu a {
+    text-decoration: none;
+    margin: 0px 20px;
+    color: var(--color_veggie);
+    font-weight: 700;
+}
+
+.menu a:hover {
+    color: var(--color_chesse);
+    border-style: groove;
+    padding: 5px;
+    transition: 0.1s;
+}
+
+.menu :nth-child(5) {
+    background-color: var(--color_veggie);
+    color: var(--color_light);
+    border-radius: 7px;
+    padding: 7px 18px;
+    
+}
+
+.menu :nth-child(5):hover{
+    border-style: none;
+    padding: 7px 18px;
+}
+
+/* <---------------------HOME-PAGE-START---------------------->*/
+
+/* header */
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/bg_Image.png);
+    background-size: 45% 90%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    position: relative;
+}
+
+.menu .home {
+    color: var(--color_chesse);
+}
+
+/*Heading text*/
+.h-text {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    padding: 15px;
+}
+
+.h-text p {
+    color: #262626;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.h-text h1 {
+    font-size: 4em;
+    line-height: 1.5em;
+}
+
+.h-text h1 span {
+    color: var(--color_gravy);
+}
+
+/*Order & Discount Buttons*/
+#order {
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: var(--color_gravy);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#order:hover {
+    background-color: var(--color_dark);
+    transition: 0.3s;
+}
+
+#order a {
+    text-decoration: none;
+    color: var(--color_light);
+    font-size: large;
+}
+
+#dis {
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--color_chesse);
+    border-radius: 8px;
+}
+
+/* Popular Pizza */
+.popular_dishes{
+    margin: 0px 100px;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text1 h1{
+    margin-bottom: 30px;
+}
+
+/*pizza box*/
+.pizza{
+    width: 20vw;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--color_chesse);
+    box-shadow: 0px 0px 15px var(--color_chesse);
+    
+}
+
+.pizza4{
+    width: 20vw;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--color_veggie);
+    box-shadow: 0px 0px 15px var(--color_veggie);
+}
+
+.pizza_img{
+    width:250px; 
+    height:250px;
+}
+
+.pizza_name{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.pizza_description{
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.price{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    
+}
+
+.cart{
+    margin-top: 10px;
+    padding-bottom: 15px;
+}
+
+.addtocart{
+    padding: 7px 10px;
+    border: none;    
+    background-color: var(--color_dark);
+}
+
+.addtocart:hover{
+    background-color: var(--color_light);   
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.addtocart a{
+    text-decoration: none; 
+    color: var(--color_light);
+}
+
+.addtocart:hover a{
+    color: var(--color_dark);
+}
+
+
+/* How it works*/
+.works{
+    margin: 100px 100px 150px 100px;
+}
+
+.title{
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 0.1rem solid rgba(0,0,0,0.1);
+}
+
+.title span{
+    color: var(--color_gravy);
+}
+
+.work_box{
+    display: inline-block;
+    padding: 0px 45px;
+}
+
+.work_description{
+    margin-top: 15px;
+    color: var(--color_gravy);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.work_box_img{
+    text-align: center;
+}
+
+/* <------------------------HOME-END----------------------->*/
+
+
+/*<----------------------ORDER-STARTS----------------------->*/
+
+.menu .order{
+    color: var(--color_chesse);
+}
+
+.online_food_delivery_box {
+    margin-top: 50px;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-bottom: 60px;
+    padding: 20px 40px;
+    background-color: var(--color_chesse);
+    box-shadow: 3px 5px 10px var(--color_chesse);
+}
+.result_box {
+    margin-top: 15%;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-bottom: 60px;
+    padding: 20px 40px;
+    background-color: var(--color_veggie);
+    box-shadow: 3px 5px 10px var(--color_veggie);
+}
+.result_box_text {
+    color: var(--color_dark);
+    font-size: 20px;
+    text-align: center;
+    padding-top:10px;
+}
+.result_box_text span {
+    color: var(--color_dark);
+    font-size: 26px;
+    text-align: center;
+}
+
+/* <----------------------ORDER-ENDS----------------------->*/
+
+
+/* <----------------------ABOUT-US-START-------------------->*/
+
+.menu .about-us{
+    color: var(--color_chesse);
+}
+
+
+/*Abous us page start*/
+
+.aboutus-box{
+    margin: 50px 100px;
+    display: flex;
+    align-items: center;
+}
+
+.aboutus-img img{
+    width: 40vw;
+    height: 700px;
+    margin-right: 20px;
+}
+
+.aboutus-content{
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.aboutus-content h1{
+    margin-bottom: 20px;
+}
+
+.aboutus-content h1 span{
+    color: var(--color_gravy);
+}
+
+.aboutus-content .para{
+    font-size: 17px;
+    letter-spacing: 1px;
+    line-height: 27px;
+}
+
+.aboutus-content .para:nth-child(2)::first-letter{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color_veggie);
+}
+
+.maps{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.maps h1{
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+/* <----------------------ABOUT-US-END-------------------->*/
+
+
+
+/* <-----------------------Login-STARTS-------------------->*/
+.menu .login{
+    color: var(--color_chesse);
+}
+
+.login-form{
+    margin: 50px 500px;
+    padding: 30px;
+    background-color: var(--color_chesse);
+    box-shadow: 0px 0px 15px var(--color_chesse);
+}
+
+.login-form h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color_gravy);
+}
+
+.login-form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-form button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color_dark);
+    color: var(--color_light);
+}
+
+.login-form button:hover{
+    background-color: var(--color_gravy);
+}
+
+.login-form p{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-form p a{
+    text-decoration: none;
+    color: var(--color_gravy);
+    font-weight: bold;
+}
+
+.login-form p a:hover{
+    color: var(--color_veggie);
+}
+
+/* <-----------------------Login-ENDS-------------------->*/
+
+
+
+/* <-----------------------Sign-up-STARTS-------------------->*/
+.signup-form{
+    margin: 50px 500px;
+    padding: 30px;
+    background-color: var(--color_chesse);
+    box-shadow: 0px 0px 15px var(--color_chesse);
+}
+
+.signup-form h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color_gravy);
+}
+
+.signup-form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.signup-form button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color_dark);
+    color: var(--color_light);
+}
+
+.signup-form button:hover{
+    background-color: var(--color_gravy);
+}
+
+.signup-form p{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup-form p a{
+    text-decoration: none;
+    color: var(--color_gravy);
+    font-weight: bold;
+}
+
+.signup-form p a:hover{
+    color: var(--color_veggie);
+}
+
+/* <-----------------------Sign-up-ENDS-------------------->*/
+
+
+
+/*<--------------------------Footer------------------------> */
+
+.footer{
+    padding: 40px;
+    background-color: var(--color_chesse);
+}
+
+.footer-container{
+    display: flex;
+}
+
+.footer-box{
+    width: 30vw;
+    text-align: center;
+}
+
+.footer .credit{
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 40px;
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: var(--color_dark);
+    border-top: .1rem solid var(--color_gravy);
+  }
+
+.footer-box .share a{
+    color: var(--color_dark);
+    text-decoration: none;
+    font-size: 25px;
+    padding: 10px;
+  }
+
+.footer-box .share a:hover{
+        color: var(--color_gravy);
+  }
+
+.footer-box h3{
+    color: var(--color_gravy);
+  }
+
+.footer-box .gmail-link{
+            text-decoration: none;
+            color: var(--color_dark);
+  }
+
+.footer-box .gmail-link:hover{
+        color: var(--color_gravy);
+    }
+
+/*<--------------------------Footer-Ends------------------------> */
+
+
+  

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Your Order Details </title>
+
+    <!----------------icon----------------->
+    <link rel="icon" type="images/png" href="images/Black_Logo.png">
+
+    <!--------------------Bootstrap-------------->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!----------------------------- font awesome cdn link  -------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!------------------------------------- custom css ------------------------------------->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function finalCost() {
+            var foodItem = document.getElementById("food_item").value;
+            var foodQuatity = document.getElementById("food_quantity").value;
+            var deliveryType = document.getElementById("delivery_type").value;
+            var deliveryArea = document.getElementById("delivery_area").value;
+
+            var all_food = (parseInt(foodItem) * 7) + (parseInt(deliveryType) * 4) + (parseInt(deliveryArea) * 3)
+            document.getElementById("result").innerHTML = all_food;
+        }
+        function ok_result() {
+            document.getElementById("okResult").style.display = "block";
+            document.getElementById("okResult").style.backgroundColor = "#DCE775";
+            document.getElementById("input_box").style.display = "none";
+        }
+    </script>
+
+</head>
+
+<body>
+    <!------------------------------------ NavBar --------------------------------------------->
+    <nav>
+        <div class="logo"><img src="./images/Black_Logo.png" width="75px"></div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About us</a>
+            <a href="Order.html" class="order">Order</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+    <!------------------------------------- Navbar Ends ------------------------------------------>
+    <div class="online_food_delivery_box animated bounceInDown" id="input_box">
+        <h3> Your Order Details </h3><br>
+        <form>
+            <div class="form-group">
+                <select class="form-control" id="food_item" onchange="finalCost()">
+                    <option value="0"> Select Food Item ... </option>
+                    <option value="1"> MARGHERITA </option>
+                    <option value="2"> FARM HOUSE </option>
+                    <option value="3"> PEPPY PANEER </option>
+                    <option value="4"> MEXICAN GREEN WAVE </option>
+                    <option value="5"> CHESSE POTATO SHOTS </option>
+                    <option value="6"> STUFFED GARLIC BREAD STICK </option>
+                    <option value="7"> GARLIC BREAD </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="delivery_type" onchange="finalCost()">
+                    <option value="0"> Delivery Type - </option>
+                    <option value="0"> Normal </option>
+                    <option value="2"> Emergency </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="delivery_area" onchange="finalCost()">
+                    <option value="0"> Select Delivery Area ... </option>
+                    <option value="1"> New York </option>
+                    <option value="2"> Jersey City </option>
+                    <option value="3"> Kearny </option>
+                    <option value="4"> Bayonne </option>
+                    <option value="5"> Brooklyn </option>
+                </select>
+            </div><br>
+            <div class="form-group">
+                <label>Total Cost ($) : </label>
+                <span id="result"
+                    style="background-color: #5F8D37 ;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;">0</span>
+                <input type="button" value="SUBMIT" class="btn btn-primary" style="float: right" id="ok"
+                    onclick="ok_result()">
+            </div>
+        </form>
+    </div>
+
+    <div class="result_box animated zoomIn" style="display: none;" id="okResult">
+        <h3 class="result_box_text" id="ok_text"> Your order is successfully submitted. Please keep patience, we will
+            come to you soon.<br><br><span> -- Thank You -- </span></h3><br>
+    </div>
+
+    <!---------------------------------------- Footer ------------------------------------------------------>
+    <section class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h3>Find Us Here</h3><br><br>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact Us</h3><br><br>
+                <p>(+91)-9930364613</p><br>
+                <a href="#" class="gmail-link">awesome77u@gmail.com</a>
+            </div>
+            <div class="footer-box">
+                <h3>Location</h3><br><br>
+                <p>254 S 2nd St, Brooklyn, NY 11211, United States</p>
+            </div>
+        </div>
+        <div class="credit">Created By <span>Raj</span> | All rights reserved!</div>
+    </section>
+    <!--------------------------------------- Footer Ends --------------------------------------->
+
+</body>
+
+</html>

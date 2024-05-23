@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+
+    <!----------------icon----------------->
+    <link rel="icon" type="images/png" href="images/Black_Logo.png">
+
+    <!----------------------------- font awesome cdn link  -------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <!------------------------------------- custom css ------------------------------------->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--NavBar-->
+    <nav>
+        <div class="logo"><img src="./images/Black_Logo.png" width="75px"></div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About us</a>
+            <a href="Order.html">Order</a>
+            <a href="login.html" class="login">Login</a>
+        </div>
+    </nav>
+    <!------------------------------------- Navbar Ends ------------------------------------------>
+
+
+    <!------------------------------------- Signup Form ------------------------------------------>
+    <form class="signup-form">
+        <h1> Sign Up </h1>
+        <label for="uname">Username:</label>
+        <input id="uname"><br>
+        <br>
+        <label for="pass">Password:</label>
+        <input id="pass" type="password"><br>
+        <button type="submit" onclick="fun()">Submit</button>
+        <p id="demo"></p>
+        <p><a href="login.html">Login</a></p>
+    </form>
+    <!------------------------------------- Signup Form Ends --------------------------------------->
+
+
+    <!------------------------------------- Internal Java Script ----------------------------------------------->
+    <script>
+        function fun() {
+            let uname = document.getElementById('uname').value;
+            let pass = document.getElementById('pass').value;
+            // Save the name in localStorage.
+            localStorage.setItem('name', uname);
+            localStorage.setItem('password', pass);
+            document.getElementById("demo").innerHTML = ("Successful")
+        }
+
+    </script>
+
+    <!------------------------------------- Internal Java Script Ends ------------------------------------------->
+
+
+    <!---------------------------------------- Footer ------------------------------------------------------>
+    <section class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <h3>Find Us Here</h3><br><br>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact Us</h3><br><br>
+                <p>(+91)-9930364613</p><br>
+                <a href="#" class="gmail-link">awesome77u@gmail.com</a>
+            </div>
+            <div class="footer-box">
+                <h3>Location</h3><br><br>
+                <p>254 S 2nd St, Brooklyn, NY 11211, United States</p>
+            </div>
+        </div>
+        <div class="credit">Created By <span>Raj</span> | All rights reserved!</div>
+    </section>
+    <!--------------------------------------- Footer Ends --------------------------------------->
+
+</body>
+
+</html>
